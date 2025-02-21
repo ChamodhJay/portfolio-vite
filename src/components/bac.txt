@@ -1,0 +1,186 @@
+<template>
+    <!-- On-going Projects Section -->
+    <section id="projects" class="py-16 bg-gradient-to-r from-gray-900 via-purple-900 to-black">
+        <div class="container mx-auto">
+            
+            <div class="mb-16 text-left slide-in-left">
+                <h2 class="flex items-center gap-3 mb-6 text-4xl font-bold tracking-tight text-white group">
+                    
+                    <i class="fa fa-rocket" style="color: aquamarine;" aria-hidden="true"></i>
+                    <span class="relative hover-underline-animation">Current Projects</span>
+                </h2>
+               
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 w-[90%] mx-auto">
+
+                <div v-for="project in currentProjects" :key="project.id"
+                    class="overflow-hidden transition-transform duration-300 ease-in-out transform border border-transparent rounded-lg shadow-lg bg-white/10 backdrop-blur-lg hover:shadow-purple-500/50 hover:scale-105 hover:border-purple-500">
+                    <NuxtLink :to="project.link" :target="'_blank'" class="block">
+                        <img :src="project.image" :alt="project.title" class="object-cover w-full h-48 mb-4 rounded-t-lg" />
+                    </NuxtLink>
+                    <div class="p-6">
+                        <h3 class="mb-4 text-2xl font-bold text-white">{{ project.title }}</h3>
+
+                           <!-- Tech Stack Badges -->
+                           <div class="flex flex-wrap gap-1 mt-4 mb-3">
+                            <span v-for="tech in project.technologies" :key="tech"
+                                class="px-3 py-1 text-xs font-normal text-white transition duration-300 bg-transparent border border-purple-500 rounded-full hover:bg-purple-500/20 hover:shadow-md hover:shadow-purple-500/50">
+                                {{ tech }}
+                            </span>
+                        </div>
+
+                        <div v-if="project.description.length > 200">
+                            <p v-if="!project.isExpanded" class="text-gray-300 text-balance">
+                                {{ project.description.substring(0, 100) + '...' }}</p>
+                            <p v-else class="text-gray-300 text-balance">{{ project.description }}</p>
+                            <button @click="toggleDescription(project)" class="text-purple-400 transition duration-200 hover:text-purple-300 hover:underline">
+                                {{ project.isExpanded ? 'See Less' : 'See More' }}
+                            </button>
+                        </div>
+                        <div v-else>
+                            <p class="text-gray-300">{{ project.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+
+<script setup>
+import { ref } from 'vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+ const currentProjects = ref([{
+            id: 1,
+            title: 'VBA MACRO SHEET GENERATOR',
+            description: 'This is a custom-built VBA macro designed to automate the processing of large hotel reports within Excel. The macro streamlines data manipulation by automating tasks such as data cleansing, aggregation, and formatting, significantly reducing manual workload. It also performs advanced calculations and generates detailed summary reports, enabling hotel management to derive actionable insights with greater accuracy and speed. The solution enhances operational efficiency and improves decision-making through streamlined reporting workflows.',
+            image: '/images/vba.jpg',
+     link: '',
+     technologies: ["Vue.js", "HTML"],
+            isExpanded: false
+        },
+        {
+            id: 2,
+            title: 'RESERVATION UPLOADER CLI PROGRAMME',
+            description: 'This is a Node.js-based application developed to automate the uploading of guest reservation data into Opera Cloud via the Oracle Hospitality API. The tool imports reservation details from CSV files and includes robust validation mechanisms to ensure data integrity. Guest profile IDs are cross-checked for validity, and any missing or invalid entries trigger detailed error notifications, allowing for quick resolution. The tool significantly reduces manual data entry errors and optimizes the reservation management process, improving operational efficiency for hotels.',
+            image: '/images/cli.png',
+            link: '',
+            technologies: ["Vue.js", "HTML"],
+            isExpanded: false
+        },
+        {
+            id: 3,
+            title: 'AFFERO SELF CHECK-IN WEB SYSTEM',
+            description: 'This is a comprehensive self-check-in system, incorporating both a backend notification service and a frontend pre-arrival web portal AscNotifier: A Windows service developed using C# .NET, designed to automate pre-arrival email notifications for hotel guests. The service runs daily, checking upcoming reservations and sending personalized reminder emails three days prior to guests arrival This feature ensures timely communication  enhancing the guest experience and improving hotel operations.Affero Pre-arrival Web Portal: A web-based application built with Nuxt.js, providing guests with a seamless pre-arrival check-in process. The portal allows users to manage their reservations and complete check-in tasks online, improving convenience and reducing on-site check-in times. Integrated with AscNotifier this system provides a unified efficient guest interaction platform. ',
+            image: '/images/asc.jpg',
+            link: '',
+            technologies: ["Vue.js", "HTML"],
+            isExpanded: false
+        }
+    ]);
+    function toggleDescription(project) {
+        project.isExpanded = !project.isExpanded
+    }
+</script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&family=SUSE:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&family=Righteous&family=SUSE:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+    /* font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    h1 {
+        font-family: "Protest Guerrilla", sans-serif;
+    }
+
+    h2,
+    span,
+    a {
+        /* font-family: "Space Grotesk", sans-serif; */
+        font-family: "Righteous", sans-serif;
+
+    }
+
+    h3,
+    p {
+        font-family: "Space Grotesk", sans-serif;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes blinkCursor {
+        from {
+            border-color: transparent;
+        }
+
+        to {
+            border-color: white;
+        }
+    }
+
+
+    /* Hover underline animation */
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #64FFDA;
+    transition: width 0.3s ease-in-out;
+}
+
+.hover-underline-animation:hover::after {
+    width: 100%;
+}
+
+
+
+    
+</style>
