@@ -1,40 +1,51 @@
 <template>
   <div>
-
-
     <Navbar />
 
-
-    <section id="home"
-      class="min-h-screen px-6 bg-gradient-to-r from-gray-900 via-purple-900 to-black sm:px-8 lg:px-12">
-
+    <section
+      id="home"
+      class="min-h-screen px-6 bg-gradient-to-r from-gray-900 via-purple-900 to-black sm:px-8 lg:px-12"
+    >
       <div class="container flex items-center min-h-screen mx-auto">
-        <div class="flex flex-col items-center justify-between w-full lg:flex-row">
+        <div
+          class="flex flex-col items-center justify-between w-full lg:flex-row"
+        >
           <!-- Left Content -->
           <div class="w-full space-y-6 text-white lg:w-1/2 lg:pr-12">
             <h1 class="text-4xl font-bold sm:text-5xl lg:text-6xl">
-              <span class="text-yellow-400 text-7xl lg:text-8xl drop-shadow-lg">H</span>ello, I'm
-              <br>
-              <span class="text-yellow-400 text-7xl lg:text-8xl drop-shadow-lg">C</span>hamodh
-              <span class="text-yellow-400 text-7xl lg:text-8xl drop-shadow-lg">J</span>ayasinghe
+              <span class="text-yellow-400 text-7xl lg:text-8xl drop-shadow-lg"
+                >H</span
+              >ello, I'm
+              <br />
+              <span class="text-yellow-400 text-7xl lg:text-8xl drop-shadow-lg"
+                >C</span
+              >hamodh
+              <span class="text-yellow-400 text-7xl lg:text-8xl drop-shadow-lg"
+                >J</span
+              >ayasinghe
             </h1>
 
             <div class="relative">
-              <p class="text-2xl font-bold text-yellow-400 lg:text-3xl typewriter">
+              <p
+                class="text-2xl font-bold text-yellow-400 lg:text-3xl typewriter"
+              >
                 Full Stack Developer
               </p>
             </div>
 
             <p class="text-lg text-gray-100">
               Passionate about creating elegant solutions through code.
-              Specialized in building modern web applications with cutting-edge technologies.
+              Specialized in building modern web applications with cutting-edge
+              technologies.
             </p>
 
             <div class="flex space-x-4">
-              <a href="#aboutme"
-  class="relative px-6 py-2 font-bold text-white backdrop-blur-md bg-white/10 border border-1 rounded-lg transition-all duration-300 ease-in-out before:absolute before:inset-0 before:-z-10 before:rounded-lg before:bg-gradient-to-r before:from-blue-600 before:via-purple-600 before:to-black before:bg-[length:400%_400%] before:blur-md before:opacity-50 before:transition-opacity before:duration-300 hover:before:opacity-100 hover:scale-105 hover:border-purple-500">
-  About Me
-</a>
+              <a
+                href="#aboutme"
+                class="relative px-6 py-2 font-bold text-white backdrop-blur-md bg-white/10 border border-1 rounded-lg transition-all duration-300 ease-in-out before:absolute before:inset-0 before:-z-10 before:rounded-lg before:bg-gradient-to-r before:from-blue-600 before:via-purple-600 before:to-black before:bg-[length:400%_400%] before:blur-md before:opacity-50 before:transition-opacity before:duration-300 hover:before:opacity-100 hover:scale-105 hover:border-purple-500"
+              >
+                About Me
+              </a>
 
               <!-- Social Icons -->
               <!-- <div class="flex items-center space-x-4">
@@ -52,77 +63,87 @@
                 </a>
               </div> -->
             </div>
-
           </div>
 
           <!-- Right Profile Picture -->
           <div class="flex justify-center w-full mt-12 lg:w-1/2 lg:mt-0">
             <div class="relative">
-            
               <!-- Glow Effect -->
 
-
-              <div class="absolute inset-0 rounded-full bg-gradient-to-r from-[#FF1493] to-[#00FFFF] opacity-80 blur-3xl animate-slideInLeft"></div>
-
-
-           
-
+              <div
+                class="absolute inset-0 rounded-full bg-gradient-to-r from-[#FF1493] to-[#00FFFF] opacity-80 blur-3xl animate-slideInLeft"
+              ></div>
 
               <div class="image-container">
                 <div class="animated-image"></div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
     </section>
 
-
     <Aboutme />
 
-
-    <Experience/>
-
-    
+    <Experience />
 
     <projects />
 
     <Currentprojects />
 
     <!-- Contact Section -->
-    <section id="contact" class="py-8 text-white bg-gradient-to-r from-gray-800 via-gray-900 to-black md:py-16">
+    <section
+      id="contact"
+      class="py-8 text-white bg-gradient-to-r from-gray-800 via-gray-900 to-black md:py-16"
+    >
       <div class="container px-4 mx-auto text-center">
-        <h2 class="mb-4 text-3xl font-bold md:mb-8 md:text-4xl">Get in Touch</h2>
-        <p class="mb-6 text-lg md:mb-8 md:text-xl">Feel free to reach out to me via email or on social media!</p>
+        <h2 class="mb-4 text-3xl font-bold md:mb-8 md:text-4xl">
+          Get in Touch
+        </h2>
+        <p class="mb-6 text-lg md:mb-8 md:text-xl">
+          Feel free to reach out to me via email or on social media!
+        </p>
 
         <!-- Button Container -->
-        <div class="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+        <div
+          class="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
+        >
           <!-- Email Button -->
-          <a href="mailto:nimeshacchamodh123@gmail.com" target="_blank"
-            class="flex items-center justify-center w-full px-4 py-2 space-x-2 text-sm transition-all bg-blue-500 rounded-full hover:scale-105 sm:w-auto md:px-6 md:py-3 hover:bg-blue-600 md:text-base">
+          <a
+            href="mailto:nimeshacchamodh123@gmail.com"
+            target="_blank"
+            class="flex items-center justify-center w-full px-4 py-2 space-x-2 text-sm transition-all bg-blue-500 rounded-full hover:scale-105 sm:w-auto md:px-6 md:py-3 hover:bg-blue-600 md:text-base"
+          >
             <i class="fas fa-envelope"></i>
             <span>Email Me</span>
           </a>
 
           <!-- LinkedIn Button -->
-          <a href="https://www.linkedin.com/in/chamodh-jayasinghe-b27679278/" target="_blank"
-            class="flex items-center justify-center w-full px-4 py-2 space-x-2 text-sm transition-all bg-green-500 rounded-full hover:scale-105 sm:w-auto md:px-6 md:py-3 hover:bg-green-600 md:text-base">
+          <a
+            href="https://www.linkedin.com/in/chamodh-jayasinghe-b27679278/"
+            target="_blank"
+            class="flex items-center justify-center w-full px-4 py-2 space-x-2 text-sm transition-all bg-green-500 rounded-full hover:scale-105 sm:w-auto md:px-6 md:py-3 hover:bg-green-600 md:text-base"
+          >
             <i class="fab fa-linkedin"></i>
             <span>LinkedIn</span>
           </a>
 
           <!-- GitHub Button -->
-          <a href="https://github.com/ChamodhJay" target="_blank"
-            class="flex items-center justify-center w-full px-4 py-2 space-x-2 text-sm transition-all bg-gray-500 rounded-full hover:scale-105 sm:w-auto md:px-6 md:py-3 hover:bg-gray-600 md:text-base">
+          <a
+            href="https://github.com/ChamodhJay"
+            target="_blank"
+            class="flex items-center justify-center w-full px-4 py-2 space-x-2 text-sm transition-all bg-gray-500 rounded-full hover:scale-105 sm:w-auto md:px-6 md:py-3 hover:bg-gray-600 md:text-base"
+          >
             <i class="fab fa-github"></i>
             <span>GitHub</span>
           </a>
 
           <!-- CV Download Button -->
-          <a href="https://drive.usercontent.google.com/download?id=1A3MOkzLNha4FrWKIDiBNPsP8sggy5irg&export=download&authuser=0&confirm=t&uuid=c23a3370-79f8-45f8-8687-be125816c58d&at=APvzH3qNBWqgt3de9frbDIIxo4_V:1734250307935"
+          <a
+            href="https://drive.usercontent.google.com/download?id=1A3MOkzLNha4FrWKIDiBNPsP8sggy5irg&export=download&authuser=0&confirm=t&uuid=c23a3370-79f8-45f8-8687-be125816c58d&at=APvzH3qNBWqgt3de9frbDIIxo4_V:1734250307935"
             download
-            class="flex items-center justify-center w-full px-4 py-2 space-x-2 text-sm transition-all bg-red-500 rounded-full hover:scale-105 sm:w-auto md:px-6 md:py-3 hover:bg-red-600 md:text-base">
+            class="flex items-center justify-center w-full px-4 py-2 space-x-2 text-sm transition-all bg-red-500 rounded-full hover:scale-105 sm:w-auto md:px-6 md:py-3 hover:bg-red-600 md:text-base"
+          >
             <i class="fas fa-file-download"></i>
             <span>Download CV</span>
           </a>
@@ -131,62 +152,64 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-4 text-center text-white bg-gradient-to-r from-gray-800 via-gray-900 to-black md:py-6">
+    <footer
+      class="py-4 text-center text-white bg-gradient-to-r from-gray-800 via-gray-900 to-black md:py-6"
+    >
       <div class="flex items-center justify-center px-4 space-x-2">
-        <img src="/images/logo.png" alt="Site Logo" class="w-auto h-6 md:h-8">
-        <p class="text-sm md:text-base">© 2025 CjaySolutions. All rights reserved.</p>
+        <img src="/images/logo.png" alt="Site Logo" class="w-auto h-6 md:h-8" />
+        <p class="text-sm md:text-base">
+          © 2025 CjaySolutions. All rights reserved.
+        </p>
       </div>
     </footer>
-
-    
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-import Navbar from './components/Navbar.vue'
-import Projects from './components/Projects.vue'
-import Currentprojects from './components/Ongoingprojects.vue'
-import Aboutme from './components/Aboutme.vue'
-import Experience from './components/Experience.vue';
-
-
-
+import { ref, onMounted, onUnmounted } from "vue";
+import Navbar from "./components/Navbar.vue";
+import Projects from "./components/Projects.vue";
+import Currentprojects from "./components/Ongoingprojects.vue";
+import Aboutme from "./components/Aboutme.vue";
+import Experience from "./components/Experience.vue";
 
 onMounted(() => {
-
-
-
   // Load Font Awesome stylesheet dynamically if not already loaded
-  if (!document.querySelector('link[href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"]')) {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+  if (
+    !document.querySelector(
+      'link[href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"]'
+    )
+  ) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href =
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css";
     document.head.appendChild(link);
   }
 });
-
-
-
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&family=SUSE:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&family=Righteous&family=SUSE:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&family=SUSE:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Guerrilla&family=Righteous&family=SUSE:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap");
 
 @keyframes glow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
   }
-  .hover\:before\:animate-glow:hover::before {
-    animation: glow 6s linear infinite;
+  50% {
+    background-position: 100% 50%;
   }
-
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.hover\:before\:animate-glow:hover::before {
+  animation: glow 6s linear infinite;
+}
 
 html {
   scroll-behavior: smooth;
@@ -201,14 +224,12 @@ span,
 a {
   /* font-family: "Space Grotesk", sans-serif; */
   font-family: "Righteous", sans-serif;
-
 }
 
 h3,
 p {
   font-family: "Space Grotesk", sans-serif;
 }
-
 
 /* Image container styling */
 .image-container {
@@ -217,7 +238,7 @@ p {
   /* Width equivalent to w-64 */
   height: 16rem;
   /* Height equivalent to h-64 */
-  border: 4px solid white;
+  border: 6px solid white;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -225,11 +246,18 @@ p {
 }
 
 @media (min-width: 1024px) {
-
   /* Larger screen styles (equivalent to lg:w-96, lg:h-96) */
   .image-container {
-    width: 24rem;
-    height: 24rem;
+    width: 28rem;
+    height: 28rem;
+  }
+}
+
+@media (max-width: 720px) {
+  /* Larger screen styles (equivalent to lg:w-96, lg:h-96) */
+  .image-container {
+    width: 20rem;
+    height: 20rem;
   }
 }
 
@@ -247,28 +275,33 @@ p {
 /* Keyframes for background image animation */
 @keyframes changeImage {
   0% {
-    background-image: url('./assets/img/profile/1.png');
+    background-image: url("./assets/img/profile/cjay1.jpg");
   }
 
   33.33% {
-    background-image: url('./assets/img/profile/2.png');
+    background-image: url("./assets/img/profile/cjay1.jpg");
   }
 
   66.66% {
-    background-image: url('./assets/img/profile/3.png');
+    background-image: url("./assets/img/profile/cjay1.jpg");
   }
 
   100% {
-    background-image: url('./assets/img/profile/1.png');
+    background-image: url("./assets/img/profile/cjay1.jpg");
   }
 }
 </style>
 
 <style scoped>
-
 @keyframes slideInLeft {
-  0% { transform: translateX(-100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 .animate-slideInLeft {
   animation: slideInLeft 2s ease-out;
@@ -276,11 +309,12 @@ p {
 /* Typewriter Animation */
 .typewriter {
   overflow: hidden;
-  border-right: 0.15em solid #FFD700;
+  border-right: 0.15em solid #ffd700;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.15em;
-  animation: typing 3.5s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+  animation: typing 3.5s steps(40, end) infinite,
+    blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -307,8 +341,6 @@ p {
     /* Pause after typing */
   }
 
-
-
   100% {
     width: 0;
     /* Reset for the next loop */
@@ -316,25 +348,16 @@ p {
 }
 
 @keyframes blink-caret {
-
   from,
   to {
     border-color: transparent;
   }
 
   50% {
-    border-color: #FFD700;
+    border-color: #ffd700;
   }
 }
-
-
-
 </style>
-
-
-
-
-
 
 <!-- /* Rotating Ring Animation */
 
