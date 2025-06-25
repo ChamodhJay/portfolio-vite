@@ -4,51 +4,161 @@
 
     <section
       id="home"
-      class="min-h-screen px-6 bg-gradient-to-r from-gray-900 via-purple-900 to-black sm:px-8 lg:px-12"
+      class="relative min-h-screen px-6 overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-black sm:px-8 lg:px-12"
     >
-      <div class="container flex items-center min-h-screen mx-auto">
+      <!-- Space Comets Animation Background -->
+      <div class="absolute inset-0">
+        <div class="comet comet-1">
+          <div class="comet-dot"></div>
+          <div class="comet-tail comet-tail-1"></div>
+        </div>
+
+        <div class="comet comet-2">
+          <div class="comet-dot"></div>
+          <div class="comet-tail comet-tail-2"></div>
+        </div>
+
+        <div class="comet comet-3">
+          <div class="comet-dot"></div>
+          <div class="comet-tail comet-tail-3"></div>
+        </div>
+
+        <div class="comet comet-4">
+          <div class="comet-dot"></div>
+          <div class="comet-tail comet-tail-4"></div>
+        </div>
+
+        <div class="comet comet-5">
+          <div class="comet-dot"></div>
+          <div class="comet-tail comet-tail-5"></div>
+        </div>
+      </div>
+
+      <div
+        class="container relative z-10 flex items-center min-h-screen mx-auto"
+      >
         <div
           class="flex flex-col items-center justify-between w-full lg:flex-row"
         >
-          <!-- Left Content -->
-          <div class="w-full space-y-6 text-white lg:w-1/2 lg:pr-12">
-            <h1 class="text-4xl font-bold sm:text-5xl lg:text-6xl">
-              <span class="text-yellow-400 text-7xl lg:text-8xl drop-shadow-lg"
-                >H</span
-              >ello, I'm
-              <br />
-              <span class="text-yellow-400 text-7xl lg:text-8xl drop-shadow-lg"
-                >C</span
-              >hamodh
-              <span class="text-yellow-400 text-7xl lg:text-8xl drop-shadow-lg"
-                >J</span
-              >ayasinghe
-            </h1>
+          <!-- Mobile-First Professional Layout -->
+          <div
+            class="w-full space-y-6 text-center text-white lg:w-1/2 lg:pr-12 lg:text-left"
+          >
+            <!-- Mobile: Name with Profile Picture Below -->
+            <div class="flex flex-col items-center space-y-6 lg:hidden">
+              <!-- Name -->
+              <div class="text-center">
+                <h1 class="text-4xl font-bold leading-tight">
+                  <span class="text-5xl text-yellow-400 drop-shadow-lg">H</span
+                  >ello,
+                  <br />
+                  I'm
+                  <span class="text-5xl text-yellow-400 drop-shadow-lg">C</span
+                  >hamodh
+                  <span class="text-5xl text-yellow-400 drop-shadow-lg">J</span
+                  >ayasinghe
+                </h1>
+              </div>
 
-            <div class="relative">
-              <p
-                class="text-2xl font-bold text-yellow-400 lg:text-3xl typewriter"
-              >
-                Full Stack Developer
+              <!-- Profile Picture Below Name -->
+              <div class="relative">
+                <div
+                  class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 opacity-30 blur-md"
+                ></div>
+                <div class="relative z-10 w-32 h-32 image-container">
+                  <div
+                    class="w-full h-full transition-transform duration-300 border-2 border-gray-300 rounded-full animated-image hover:scale-105"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Mobile: Typewriter Animation -->
+              <div class="relative w-full">
+                <p
+                  class="text-xl font-semibold text-center text-yellow-400 typewriter"
+                >
+                  Full Stack Developer
+                </p>
+              </div>
+            </div>
+
+            <!-- Desktop: Original Layout -->
+            <div class="hidden lg:block">
+              <h1 class="text-4xl font-bold sm:text-5xl lg:text-6xl">
+                <span
+                  class="text-yellow-400 text-7xl lg:text-8xl drop-shadow-lg"
+                  >H</span
+                >ello, I'm
+                <br />
+                <span
+                  class="text-yellow-400 text-7xl lg:text-8xl drop-shadow-lg"
+                  >C</span
+                >hamodh
+                <span
+                  class="text-yellow-400 text-7xl lg:text-8xl drop-shadow-lg"
+                  >J</span
+                >ayasinghe
+              </h1>
+
+              <div class="relative">
+                <p
+                  class="text-2xl font-bold text-yellow-400 lg:text-3xl typewriter"
+                >
+                  Full Stack Developer
+                </p>
+              </div>
+            </div>
+
+            <!-- Professional Description -->
+            <div>
+              <p class="text-lg text-center text-gray-100 lg:hidden">
+                Passionate about creating elegant solutions through code.
+                Specialized in building modern web applications with
+                cutting-edge technologies.
+              </p>
+              <p class="hidden text-lg text-gray-100 lg:block">
+                Passionate about creating elegant solutions through code.
+                Specialized in building modern web applications with
+                cutting-edge technologies.
               </p>
             </div>
 
-            <p class="text-lg text-gray-100">
-              Passionate about creating elegant solutions through code.
-              Specialized in building modern web applications with cutting-edge
-              technologies.
-            </p>
-
-            <div class="flex space-x-4">
+            <!-- Responsive Transparent Professional CTA Button -->
+            <div class="flex justify-center lg:justify-start">
               <a
                 href="#aboutme"
-                class="relative px-6 py-2 font-bold text-white backdrop-blur-md bg-white/10 border border-1 rounded-lg transition-all duration-300 ease-in-out before:absolute before:inset-0 before:-z-10 before:rounded-lg before:bg-gradient-to-r before:from-blue-600 before:via-purple-600 before:to-black before:bg-[length:400%_400%] before:blur-md before:opacity-50 before:transition-opacity before:duration-300 hover:before:opacity-100 hover:scale-105 hover:border-purple-500"
+                class="px-4 py-2 text-sm font-medium text-blue-100 transition duration-300 ease-in-out bg-transparent border border-purple-500 shadow-md btn-professional sm:text-base rounded-xl hover:bg-purple-900 hover:text-white hover:shadow-lg focus:ring-4 focus:ring-blue-300"
               >
                 About Me
               </a>
+            </div>
+          </div>
 
-              <!-- Social Icons -->
-              <!-- <div class="flex items-center space-x-4">
+          <!-- Desktop Profile Picture -->
+          <div
+            class="justify-center hidden w-full mt-12 lg:flex lg:w-1/2 lg:mt-0"
+          >
+            <div class="relative">
+              <div
+                class="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 to-cyan-400 opacity-80 blur-3xl animate-slideInLeft"
+              ></div>
+              <div class="image-container">
+                <div class="animated-image"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-wheel">
+          <div class="scroll-dot"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Social Icons -->
+    <!-- <div class="flex items-center space-x-4">
                 <a href="#" class="text-white transition-colors hover:text-yellow-400">
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path
@@ -62,26 +172,6 @@
                   </svg>
                 </a>
               </div> -->
-            </div>
-          </div>
-
-          <!-- Right Profile Picture -->
-          <div class="flex justify-center w-full mt-12 lg:w-1/2 lg:mt-0">
-            <div class="relative">
-              <!-- Glow Effect -->
-
-              <div
-                class="absolute inset-0 rounded-full bg-gradient-to-r from-[#FF1493] to-[#00FFFF] opacity-80 blur-3xl animate-slideInLeft"
-              ></div>
-
-              <div class="image-container">
-                <div class="animated-image"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <Aboutme />
 
@@ -293,6 +383,363 @@ p {
 </style>
 
 <style scoped>
+/* Original Typewriter Animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 3px solid #fcd34d;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fcd34d;
+  }
+}
+
+.image-container .animated-image {
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="%23374151"/><circle cx="50" cy="40" r="12" fill="%236B7280"/><path d="M30 70 Q50 60 70 70 Q50 80 30 70" fill="%236B7280"/></svg>')
+    center/cover;
+  border-radius: 50%;
+}
+
+/* Space Comets Animation */
+.comet {
+  position: absolute;
+}
+
+.comet-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.comet-tail {
+  position: absolute;
+  height: 1px;
+  border-radius: 1px;
+  opacity: 0.6;
+}
+
+.comet-1 {
+  top: 15%;
+  left: 5%;
+  animation: float-1 8s infinite linear;
+}
+
+.comet-1 .comet-dot {
+  background: white;
+  box-shadow: 0 0 10px white;
+  animation: glow-white 2s infinite alternate;
+}
+
+.comet-tail-1 {
+  width: 60px;
+  background: linear-gradient(90deg, transparent, white, transparent);
+  top: 1.5px;
+  left: -58px;
+  transform: rotate(45deg);
+  animation: tail-fade 2s infinite alternate;
+}
+
+.comet-2 {
+  top: 30%;
+  right: 10%;
+  animation: float-2 10s infinite linear;
+}
+
+.comet-2 .comet-dot {
+  background: #60a5fa;
+  box-shadow: 0 0 10px #60a5fa;
+  animation: glow-blue 2.5s infinite alternate;
+}
+
+.comet-tail-2 {
+  width: 45px;
+  background: linear-gradient(90deg, transparent, #60a5fa, transparent);
+  top: 1.5px;
+  left: -43px;
+  transform: rotate(15deg);
+  animation: tail-fade 2.5s infinite alternate;
+}
+
+.comet-3 {
+  top: 55%;
+  left: 15%;
+  animation: float-3 12s infinite linear;
+}
+
+.comet-3 .comet-dot {
+  background: #a78bfa;
+  box-shadow: 0 0 10px #a78bfa;
+  animation: glow-purple 3s infinite alternate;
+}
+
+.comet-tail-3 {
+  width: 35px;
+  background: linear-gradient(90deg, transparent, #a78bfa, transparent);
+  top: 1.5px;
+  left: -33px;
+  transform: rotate(-15deg);
+  animation: tail-fade 3s infinite alternate;
+}
+
+.comet-4 {
+  bottom: 25%;
+  right: 8%;
+  animation: float-4 9s infinite linear;
+}
+
+.comet-4 .comet-dot {
+  background: #22d3ee;
+  box-shadow: 0 0 10px #22d3ee;
+  animation: glow-cyan 2.2s infinite alternate;
+}
+
+.comet-tail-4 {
+  width: 50px;
+  background: linear-gradient(90deg, transparent, #22d3ee, transparent);
+  top: 1.5px;
+  left: -48px;
+  transform: rotate(35deg);
+  animation: tail-fade 2.2s infinite alternate;
+}
+
+.comet-5 {
+  top: 40%;
+  left: 50%;
+  animation: float-5 11s infinite linear;
+}
+
+.comet-5 .comet-dot {
+  background: #fde047;
+  box-shadow: 0 0 10px #fde047;
+  animation: glow-yellow 2.8s infinite alternate;
+}
+
+.comet-tail-5 {
+  width: 25px;
+  background: linear-gradient(90deg, transparent, #fde047, transparent);
+  top: 1.5px;
+  left: -23px;
+  transform: rotate(-35deg);
+  animation: tail-fade 2.8s infinite alternate;
+}
+
+/* Comet Movement Animations */
+@keyframes float-1 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-15px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-5px) translateX(5px);
+  }
+  75% {
+    transform: translateY(-20px) translateX(-5px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes float-2 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  33% {
+    transform: translateY(10px) translateX(-8px);
+  }
+  66% {
+    transform: translateY(-8px) translateX(12px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes float-3 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  40% {
+    transform: translateY(-12px) translateX(15px);
+  }
+  80% {
+    transform: translateY(8px) translateX(-10px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes float-4 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  30% {
+    transform: translateY(12px) translateX(8px);
+  }
+  70% {
+    transform: translateY(-10px) translateX(-12px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes float-5 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-18px) translateX(-15px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+/* Glow Animations */
+@keyframes glow-white {
+  0% {
+    box-shadow: 0 0 5px white;
+  }
+  100% {
+    box-shadow: 0 0 20px white, 0 0 30px white;
+  }
+}
+
+@keyframes glow-blue {
+  0% {
+    box-shadow: 0 0 5px #60a5fa;
+  }
+  100% {
+    box-shadow: 0 0 20px #60a5fa, 0 0 30px #60a5fa;
+  }
+}
+
+@keyframes glow-purple {
+  0% {
+    box-shadow: 0 0 5px #a78bfa;
+  }
+  100% {
+    box-shadow: 0 0 20px #a78bfa, 0 0 30px #a78bfa;
+  }
+}
+
+@keyframes glow-cyan {
+  0% {
+    box-shadow: 0 0 5px #22d3ee;
+  }
+  100% {
+    box-shadow: 0 0 20px #22d3ee, 0 0 30px #22d3ee;
+  }
+}
+
+@keyframes glow-yellow {
+  0% {
+    box-shadow: 0 0 5px #fde047;
+  }
+  100% {
+    box-shadow: 0 0 20px #fde047, 0 0 30px #fde047;
+  }
+}
+
+@keyframes tail-fade {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+  animation: bounce 2s infinite;
+}
+
+.scroll-wheel {
+  width: 20px;
+  height: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 6px;
+}
+
+.scroll-dot {
+  width: 2px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 9999px;
+  animation: scroll-pulse 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40%,
+  43% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  70% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+@keyframes scroll-pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 @keyframes slideInLeft {
   0% {
     transform: translateX(-100%);
